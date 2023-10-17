@@ -6,9 +6,12 @@
 package excepciones;
 
 /**
- *
- * @author 2dam
+ * Esta excepcion se utiliza cuando hay algun error de conexion con la base de datos.
+ * @author Ander 
  */
-public class ConnectException {
-    
+public class ConnectException extends Exception{
+      
+    public ConnectException(String msg) {
+        super(msg);
+    }
 }

@@ -6,9 +6,14 @@
 package excepciones;
 
 /**
+ * Este mensaje se muestra cuando alguna de las credenciales de inicio de sesion
+ * no coinciden.
  *
- * @author 2dam
+ * @author Ander
  */
-public class IncorrectCredentialsException {
-    
+public class IncorrectCredentialsException extends Exception{
+
+    public IncorrectCredentialsException(String msg) {
+        super(msg);
+    }
 }

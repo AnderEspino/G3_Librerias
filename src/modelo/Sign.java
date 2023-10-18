@@ -1,6 +1,5 @@
 package modelo;
 
-import excepciones.IncorrectCredentialsException;
 import excepciones.ConnectException;
 import excepciones.UserNotFoundException;
 import excepciones.UserAlreadyExistsException;
@@ -19,10 +18,9 @@ public interface Sign {
      * @param user
      * @return user
      * @throws excepciones.ConnectException
-     * @throws excepciones.IncorrectCredentialsException
      * @throws excepciones.UserAlreadyExistsException
      */
-    public User excecuteLogin(User user) throws ConnectException, IncorrectCredentialsException, UserAlreadyExistsException;
+    public User excecuteLogin(User user) throws ConnectException, UserAlreadyExistsException;
 
     /**
      * Método executeSignIn, se encarga de hacer el inicio de sesión

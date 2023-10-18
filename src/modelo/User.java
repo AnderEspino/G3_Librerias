@@ -20,11 +20,12 @@ public class User {
     private Integer telefono;
     private Integer zip_code;
     private String direccion;
+    private UserPrivilege privilege;
 
     public User() {
     }
 
-    public User(String nombre, String email, String contraseña, String contraRepe, Date fecha_ini, Date fecha_final, Integer telefono, Integer zip_code, String direccion) {
+    public User(String nombre, String email, String contraseña, String contraRepe, Date fecha_ini, Date fecha_final, Integer telefono, Integer zip_code, String direccion, UserPrivilege privilege) {
         this.nombre = nombre;
         this.email = email;
         this.contraseña = contraseña;
@@ -34,6 +35,7 @@ public class User {
         this.telefono = telefono;
         this.zip_code = zip_code;
         this.direccion = direccion;
+        this.privilege = privilege;
     }
 
     public String getNombre() {
@@ -108,9 +110,17 @@ public class User {
         this.direccion = direccion;
     }
 
+    public UserPrivilege getPrivilege() {
+        return privilege;
+    }
+
+    public void setPrivilege(UserPrivilege privilege) {
+        this.privilege = privilege;
+    }
+
     @Override
     public String toString() {
-        return "User{" + "nombre=" + nombre + ", email=" + email + ", contraseña=" + contraseña + ", contraRepe=" + contraRepe + ", fecha_ini=" + fecha_ini + ", fecha_final=" + fecha_final + ", telefono=" + telefono + ", zip_code=" + zip_code + ", direccion=" + direccion + '}';
+        return "User{" + "nombre=" + nombre + ", email=" + email + ", contrase\u00f1a=" + contraseña + ", contraRepe=" + contraRepe + ", fecha_ini=" + fecha_ini + ", fecha_final=" + fecha_final + ", telefono=" + telefono + ", zip_code=" + zip_code + ", direccion=" + direccion + ", privilege=" + privilege + '}';
     }
 
 }

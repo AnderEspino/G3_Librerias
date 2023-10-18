@@ -6,9 +6,11 @@
 package modelo;
 
 /**
+ * Clase enumeradora que establece el tipo de usuario a la hora de registrarse
+ * en la aplicacion con 2 valores: Usuario y administrador
  *
- * @author 2dam
+ * @author Diego
  */
 public enum UserPrivilege {
-    
+    USER, ADMIN
 }

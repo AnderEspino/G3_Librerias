@@ -1,7 +1,6 @@
 package modelo;
 
-import java.util.Date;
-import java.util.logging.Logger;
+import java.time.LocalDate;
 
 /**
  * Clase JavaBean de User, reconpila la informacion sacada de las ventanas para
@@ -15,26 +14,26 @@ public class User {
     private String email;
     private String contraseña;
     private String contraRepe;
-    private Date fecha_ini;
-    private Date fecha_final;
+    private LocalDate fecha_ini;
     private Integer telefono;
     private Integer zip_code;
     private String direccion;
-    private String compañia;
+    private Integer compañia;
     private UserPrivilege privilege;
-    private boolean activo = true;
+    private boolean activo;
 
     public User() {
-        //this.company=1;
+        this.compañia = 1;
+        this.activo = true;
+        this.fecha_ini = LocalDate.now();
     }
 
-    public User(String nombre, String email, String contraseña, String contraRepe, Date fecha_ini, Date fecha_final, Integer telefono, Integer zip_code, String direccion, UserPrivilege privilege, String compañia, boolean activo) {
+    public User(String nombre, String email, String contraseña, String contraRepe, LocalDate fecha_ini, Integer telefono, Integer zip_code, String direccion, UserPrivilege privilege, Integer compañia, boolean activo) {
         this.nombre = nombre;
         this.email = email;
         this.contraseña = contraseña;
         this.contraRepe = contraRepe;
         this.fecha_ini = fecha_ini;
-        this.fecha_final = fecha_final;
         this.telefono = telefono;
         this.zip_code = zip_code;
         this.direccion = direccion;
@@ -75,20 +74,12 @@ public class User {
         this.contraRepe = contraRepe;
     }
 
-    public Date getFecha_ini() {
+    public LocalDate getFecha_ini() {
         return fecha_ini;
     }
 
-    public void setFecha_ini(Date fecha_ini) {
+    public void setFecha_ini(LocalDate fecha_ini) {
         this.fecha_ini = fecha_ini;
-    }
-
-    public Date getFecha_final() {
-        return fecha_final;
-    }
-
-    public void setFecha_final(Date fecha_final) {
-        this.fecha_final = fecha_final;
     }
 
     public Integer getTelefono() {
@@ -123,11 +114,11 @@ public class User {
         this.privilege = privilege;
     }
 
-    public String getCompañia() {
+    public Integer getCompañia() {
         return compañia;
     }
 
-    public void setCompañia(String compañia) {
+    public void setCompañia(Integer compañia) {
         this.compañia = compañia;
     }
 
@@ -141,7 +132,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" + "nombre=" + nombre + ", email=" + email + ", contrase\u00f1a=" + contraseña + ", contraRepe=" + contraRepe + ", fecha_ini=" + fecha_ini + ", fecha_final=" + fecha_final + ", telefono=" + telefono + ", zip_code=" + zip_code + ", direccion=" + direccion + ", compañia=" + compañia + ", privilege=" + privilege + ", activo=" + activo + '}';
+        return "User{" + "nombre=" + nombre + ", email=" + email + ", contrase\u00f1a=" + contraseña + ", contraRepe=" + contraRepe + ", fecha_ini=" + fecha_ini + ", telefono=" + telefono + ", zip_code=" + zip_code + ", direccion=" + direccion + ", compa\u00f1ia=" + compañia + ", privilege=" + privilege + ", activo=" + activo + '}';
     }
 
 }

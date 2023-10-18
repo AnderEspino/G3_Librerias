@@ -20,12 +20,15 @@ public class User {
     private Integer telefono;
     private Integer zip_code;
     private String direccion;
+    private String compañia;
     private UserPrivilege privilege;
+    private boolean activo = true;
 
     public User() {
+        //this.company=1;
     }
 
-    public User(String nombre, String email, String contraseña, String contraRepe, Date fecha_ini, Date fecha_final, Integer telefono, Integer zip_code, String direccion, UserPrivilege privilege) {
+    public User(String nombre, String email, String contraseña, String contraRepe, Date fecha_ini, Date fecha_final, Integer telefono, Integer zip_code, String direccion, UserPrivilege privilege, String compañia, boolean activo) {
         this.nombre = nombre;
         this.email = email;
         this.contraseña = contraseña;
@@ -36,6 +39,8 @@ public class User {
         this.zip_code = zip_code;
         this.direccion = direccion;
         this.privilege = privilege;
+        this.activo = activo;
+        this.compañia = compañia;
     }
 
     public String getNombre() {
@@ -118,9 +123,25 @@ public class User {
         this.privilege = privilege;
     }
 
+    public String getCompañia() {
+        return compañia;
+    }
+
+    public void setCompañia(String compañia) {
+        this.compañia = compañia;
+    }
+
+    public boolean isActivo() {
+        return activo;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
+    }
+
     @Override
     public String toString() {
-        return "User{" + "nombre=" + nombre + ", email=" + email + ", contrase\u00f1a=" + contraseña + ", contraRepe=" + contraRepe + ", fecha_ini=" + fecha_ini + ", fecha_final=" + fecha_final + ", telefono=" + telefono + ", zip_code=" + zip_code + ", direccion=" + direccion + ", privilege=" + privilege + '}';
+        return "User{" + "nombre=" + nombre + ", email=" + email + ", contrase\u00f1a=" + contraseña + ", contraRepe=" + contraRepe + ", fecha_ini=" + fecha_ini + ", fecha_final=" + fecha_final + ", telefono=" + telefono + ", zip_code=" + zip_code + ", direccion=" + direccion + ", compañia=" + compañia + ", privilege=" + privilege + ", activo=" + activo + '}';
     }
 
 }

@@ -20,7 +20,6 @@ public class User {
     private Integer telefono;
     private Integer zip_code;
     private String direccion;
-    private static final Logger LOG = Logger.getLogger(User.class.getName());
 
     public User() {
     }

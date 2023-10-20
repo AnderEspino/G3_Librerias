@@ -36,4 +36,6 @@ public class Message implements Serializable {
         this.user = user;
     }
 
+  
+
 }

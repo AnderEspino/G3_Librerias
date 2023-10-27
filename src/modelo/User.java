@@ -1,5 +1,6 @@
 package modelo;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
@@ -8,7 +9,7 @@ import java.time.LocalDate;
  *
  * @author Diego
  */
-public class User {
+public class User implements Serializable {
 
     private String nombre;
     private String email;

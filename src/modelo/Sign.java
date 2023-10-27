@@ -1,6 +1,7 @@
 package modelo;
 
 import excepciones.ConnectException;
+import excepciones.IncorrectCredentialsException;
 import excepciones.UserNotFoundException;
 import excepciones.UserAlreadyExistsException;
 
@@ -28,7 +29,8 @@ public interface Sign {
      * @param user
      * @return user
      * @throws excepciones.UserNotFoundException
+     * @throws excepciones.IncorrectCredentialsException
      * @throws excepciones.ConnectException
      */
-    public User executeSignIn(User user) throws UserNotFoundException, ConnectException;
+    public User executeSignIn(User user) throws UserNotFoundException, IncorrectCredentialsException, ConnectException;
 }

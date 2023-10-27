@@ -13,7 +13,6 @@ public class User {
     private String nombre;
     private String email;
     private String contraseña;
-    private String contraRepe;
     private LocalDate fecha_ini;
     private Integer telefono;
     private Integer zip_code;
@@ -23,23 +22,21 @@ public class User {
     private boolean activo;
 
     public User() {
-        this.compañia = 1;
-        this.activo = true;
-        this.fecha_ini = LocalDate.now();
     }
 
-    public User(String nombre, String email, String contraseña, String contraRepe, LocalDate fecha_ini, Integer telefono, Integer zip_code, String direccion, UserPrivilege privilege, Integer compañia, boolean activo) {
+    public User(String nombre, String email, String contraseña, LocalDate fecha_ini, Integer telefono, Integer zip_code, String direccion, Integer compañia, UserPrivilege privilege, boolean activo) {
         this.nombre = nombre;
         this.email = email;
         this.contraseña = contraseña;
-        this.contraRepe = contraRepe;
         this.fecha_ini = fecha_ini;
         this.telefono = telefono;
         this.zip_code = zip_code;
         this.direccion = direccion;
-        this.privilege = privilege;
-        this.activo = activo;
-        this.compañia = compañia;
+        this.compañia = 1;
+        this.activo = true;
+        this.fecha_ini = LocalDate.now();
+        this.privilege = UserPrivilege.USER;
+
     }
 
     public String getNombre() {
@@ -64,14 +61,6 @@ public class User {
 
     public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
-    }
-
-    public String getContraRepe() {
-        return contraRepe;
-    }
-
-    public void setContraRepe(String contraRepe) {
-        this.contraRepe = contraRepe;
     }
 
     public LocalDate getFecha_ini() {
@@ -132,7 +121,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" + "nombre=" + nombre + ", email=" + email + ", contrase\u00f1a=" + contraseña + ", contraRepe=" + contraRepe + ", fecha_ini=" + fecha_ini + ", telefono=" + telefono + ", zip_code=" + zip_code + ", direccion=" + direccion + ", compa\u00f1ia=" + compañia + ", privilege=" + privilege + ", activo=" + activo + '}';
+        return "User{" + "nombre=" + nombre + ", email=" + email + ", contrase\u00f1a=" + contraseña + ", fecha_ini=" + fecha_ini + ", telefono=" + telefono + ", zip_code=" + zip_code + ", direccion=" + direccion + ", compa\u00f1ia=" + compañia + ", privilege=" + privilege + ", activo=" + activo + '}';
     }
 
 }

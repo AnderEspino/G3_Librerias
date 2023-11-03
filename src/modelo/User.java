@@ -29,7 +29,6 @@ public class User implements Serializable {
         this.nombre = nombre;
         this.email = email;
         this.contraseña = contraseña;
-        this.fecha_ini = fecha_ini;
         this.telefono = telefono;
         this.zip_code = zip_code;
         this.direccion = direccion;
@@ -69,7 +68,7 @@ public class User implements Serializable {
     }
 
     public void setFecha_ini(LocalDate fecha_ini) {
-        this.fecha_ini = fecha_ini;
+        this.fecha_ini = LocalDate.now();
     }
 
     public Integer getTelefono() {
@@ -101,7 +100,7 @@ public class User implements Serializable {
     }
 
     public void setPrivilege(UserPrivilege privilege) {
-        this.privilege = privilege;
+        this.privilege = UserPrivilege.USER;
     }
 
     public Integer getCompañia() {
@@ -109,7 +108,7 @@ public class User implements Serializable {
     }
 
     public void setCompañia(Integer compañia) {
-        this.compañia = compañia;
+        this.compañia = 1;
     }
 
     public boolean isActivo() {
@@ -117,7 +116,7 @@ public class User implements Serializable {
     }
 
     public void setActivo(boolean activo) {
-        this.activo = activo;
+        this.activo = true;
     }
 
     @Override

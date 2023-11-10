@@ -6,11 +6,7 @@
 package modelo;
 
 /**
- * Clase enumeradora que establece el tipo de usuario a la hora de registrarse
- * en la aplicacion con 2 valores: Usuario y administrador
+ * Paquete del modelo utilizados tanto en el servidor como en el cliente.
  *
- * @author Diego
+ * @author Diego, Adrian, Ander
  */
-public enum UserPrivilege {
-    USER, ADMIN
-}

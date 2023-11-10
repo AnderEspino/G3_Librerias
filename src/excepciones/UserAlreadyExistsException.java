@@ -6,9 +6,14 @@
 package excepciones;
 
 /**
+ * Este mensaje aparece cuando el usuario que ha introducido ya existe
+ * previamente.
  *
- * @author 2dam
+ * @author Ander
  */
-public class UserAlreadyExistsException {
-    
+public class UserAlreadyExistsException extends Exception{
+
+    public UserAlreadyExistsException(String msg) {
+        super(msg);
+    }
 }

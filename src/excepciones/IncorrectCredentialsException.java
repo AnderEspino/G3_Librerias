@@ -6,9 +6,13 @@
 package excepciones;
 
 /**
+ * Este clase muestra un mensaje de error por credenciales incorrectas.
  *
- * @author 2dam
+ * @author Ander
  */
-public class IncorrectCredentialsException {
-    
+public class IncorrectCredentialsException extends Exception {
+
+    public IncorrectCredentialsException(String msg) {
+        super(msg);
+    }
 }

@@ -6,9 +6,8 @@
 package excepciones;
 
 /**
+ * Paquete con las excepciones utilizadas tanto en el servidor como en el
+ * cliente.
  *
- * @author 2dam
+ * @author Diego, Adrian, Ander
  */
-public class UserNotFoundException {
-    
-}
